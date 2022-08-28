@@ -59,7 +59,8 @@ namespace ManagerRecords.Controllers
             {
                 Id = id,
                 UserName = recordes.UserName,
-                Number = recordes.Number
+                Number = recordes.Number,
+                Age = recordes.Age
             };
 
             _context.Entry(rec).State = EntityState.Modified;
@@ -95,7 +96,8 @@ namespace ManagerRecords.Controllers
             var rec = new Recordes
             {
                 UserName = recordes.UserName,
-                Number = recordes.Number
+                Number = recordes.Number,
+                Age = recordes.Age
             };
             _context.Recordes.Add(rec);
             await _context.SaveChangesAsync();
